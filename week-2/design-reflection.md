@@ -1,4 +1,4 @@
-![Site-map image](/imgs/site-map.png "Site map for my site")
+![Site-map image](imgs/site-map.png "Site map for my site")
 
 
 **What are the 6 Phases of Web Design?**
