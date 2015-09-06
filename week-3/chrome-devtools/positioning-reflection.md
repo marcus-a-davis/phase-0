@@ -1,12 +1,12 @@
-![Release 3.1](3-4_dev-tools-1.png "Release 3.1")
-![Release 3.2](3-4_dev-tools-1.png "Release 3.2")
-![Release 3.3](3-4_dev-tools-1.png "Release 3.3")
-![Release 3.4](3-4_dev-tools-1.png "Release 3.4")
-![Release 3.5](3-4_dev-tools-1.png "Release 3.5")
-![Release 3.6](3-4_dev-tools-1.png "Release 3.6")
-![Release 3.7](3-4_dev-tools-1.png "Release 3.7")
-![Release 3.8](3-4_dev-tools-1.png "Release 3.8")
-![Release 3.9](3-4_dev-tools-1.png "Release 3.9")
+![Release 3.1](imgs/3-4_dev-tools-1.png "Release 3.1")
+![Release 3.2](imgs/3-4_dev-tools-1.png "Release 3.2")
+![Release 3.3](imgs/3-4_dev-tools-1.png "Release 3.3")
+![Release 3.4](imgs/3-4_dev-tools-1.png "Release 3.4")
+![Release 3.5](imgs/3-4_dev-tools-1.png "Release 3.5")
+![Release 3.6](imgs/3-4_dev-tools-1.png "Release 3.6")
+![Release 3.7](imgs/3-4_dev-tools-1.png "Release 3.7")
+![Release 3.8](imgs/3-4_dev-tools-1.png "Release 3.8")
+![Release 3.9](imgs/3-4_dev-tools-1.png "Release 3.9")
 
 **How can you use Chrome's DevTools inspector to help you format or position elements?**
 You can manipulate elements in CSS within Chrome DevTools the same way
