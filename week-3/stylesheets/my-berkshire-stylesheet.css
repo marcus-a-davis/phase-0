@@ -1,0 +1,107 @@
+html {
+  background-color: #fff;
+  color: #000080;
+}
+
+header {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+#div-1 {
+  border: .1em solid gray;
+  color: black;
+  background-color: white;
+}
+
+.headtext {
+	display: block;
+}
+
+.spacer {
+	margin: 0 10px 0 0;
+}
+
+.firstcharacter {
+	font-size: 1.8em;
+}
+
+ul {
+	-webkit-column-count: 2;
+    -moz-column-count: 2;
+	column-count: 2;
+	color: #000080;
+	
+}
+
+.description {
+	font-size: 90%;
+}
+
+.geicotext {
+	display: block;
+	text-align: center;
+	font-size: .6em;
+}
+
+div {
+	height: 1px;
+	width: 100%;
+	color: black;
+}
+
+
+a:link {
+	color: #800080;
+	font-size: 100%;
+}
+
+a:visited {
+	color: #ff0000;
+	font-size: 100%;
+}
+
+/*
+What is important to know when linking an external file (like a
+stylesheet) to an HTML file?
+When linking to an external file in HTML you need to know what type of
+file it is (CSS, Javascript, etc.), what function the linked file is
+serving relative to HTML file(is it stylesheet?) and where in the
+directory the file is located (the specific path relative to the
+location of the HTML file.
+
+
+What tricks did you use to help you with positioning? How hard was it
+to get the site as you wanted it?
+I didn't use any position attributes but I did move text around with
+the text-align property, which determines justification of the elements,
+and margin, which added some spacing after my header.
+I also used column-count to get the list of links to split into two
+columns and stay that way even if the width of the page changes. 
+
+
+What CSS did you use to modify the element style (like size, color, etc.)
+I used font-size, color, background-color, border, height and weight.
+Collectively they allowed me to manipulate the page to more closely
+resemble the original Berkshire Hathaway page.
+
+
+Did you modify the HTML to include classes or ids? If so, which did you
+chose and why? If you didn't, how would you know which one to add to your
+HTML?
+I used both classes and ids. I used ids when I needed a particularly
+local change that could override the broader styles implemented by
+the classes.
+
+
+When you compared your site to the actual code base, which do you think
+had cleaner code that followed best practices and why?
+While it is clear that I followed best practices by not implementing
+any style changes within my HTML, the original file is much cleaner.
+
+In part because of the simplicity of using the <hr> tag instead of
+manipulating a div to accomplish (approximately) the same end.
+
+
+*/
