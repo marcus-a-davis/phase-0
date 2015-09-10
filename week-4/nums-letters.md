@@ -26,7 +26,9 @@ puts 60 * 24 * 365 * 10
 ```
 
 [Defining Variables](https://github.com/marcus-a-davis/phase-0/blob/master/week-4/defining-variables.rb "Defining Variables")
+
 [Simple String Methods](https://github.com/marcus-a-davis/phase-0/blob/master/week-4/simple-string.rb "Simple String Methods")
+
 [Basic Math](https://github.com/marcus-a-davis/phase-0/blob/master/week-4/basic-math.rb "Basic Math")
 
 **How does Ruby handle addition, subtraction, multiplication, and division of numbers?**
