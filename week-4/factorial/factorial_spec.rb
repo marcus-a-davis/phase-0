@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> more-meth
 require_relative "my_solution"
 
 describe 'factorial' do
