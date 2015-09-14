@@ -1,0 +1,55 @@
+header {
+    background-color: #0066FF;
+    width: 100%;
+    top: 0px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    position: relative; 
+    margin: 0px;
+    color: white;
+}
+
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    font-family: sans-serif;
+}
+
+.column-1 {
+    display: inline-block;
+    float: left;
+    width: 35%;
+    padding: 5%;
+    clear: left;
+}
+
+.column-2 {
+    width: 35%;
+    position: relative;
+    display: inline-block;
+    padding: 5%;
+    float: right;
+    clear: right;
+}
+
+footer {
+    background-color: yellow;
+    margin: 1em 0 0 0;
+    width: 100%;
+    float: bottom;
+    display: inline-block;
+    position: relative;
+}
+
+details {
+    background-color: gray;
+}
+
+summary {
+    background-color: gray;
+}
+
+article > p {
+    background-color: lightgray;
+}

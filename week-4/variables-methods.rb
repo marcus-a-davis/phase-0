@@ -17,6 +17,7 @@ fav_num = gets.chomp.to_i
 
 new_num = fav_num + 1
 
+<<<<<<< HEAD
 puts "Your favorite number should be: " + new_num.to_s
 
 =begin
@@ -62,3 +63,6 @@ Nothing was confusing as I have a bit of experience with Ruby so this
 was all basic review.
 	
 end
+=======
+puts "Your favorite number should be: " + new_num.to_s
+>>>>>>> master
