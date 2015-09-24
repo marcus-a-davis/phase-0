@@ -1,8 +1,8 @@
 # Your Names
-# 1)
-# 2)
+# 1) Jupiter Baudot
+# 2) Marcus
 
-# We spent [#] hours on this challenge.
+# We spent 75 minutes on this challenge.
 
 # Bakery Serving Size portion calculator.
 
