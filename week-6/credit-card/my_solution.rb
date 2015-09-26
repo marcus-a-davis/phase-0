@@ -17,12 +17,11 @@ split the string into individuals characters
 convert the individual characters into numbers
 starting at position zero the even numbered positions will be doubled
 
-convert each element back into a string
-split any numbers greater than 9
-convert all strings back to integers
-add them all back together
-
-test if total evenly divisible by 10
+1. convert each element back into a string
+2. split any numbers greater than 9
+3. convert all strings back to integers
+4. add them all back together
+5. test if total evenly divisible by 10
 
 
 
