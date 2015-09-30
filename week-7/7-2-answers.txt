@@ -9,39 +9,84 @@ data in a modern programming language could hardly be more dramatic.
 Ch. 1: Values, Types, and Operators
 Identify two similarities and two differences between JavaScript and Ruby syntax with regard to numbers, arithmetic, strings, booleans, and various operators.
 
+Javascript and Ruby, like many modern programming languages, handle number objects, including (to some extent) when NaN returns, very similarly. The arithmetic operators are all the same including even the ability to use the "-" operator to function as multiplying by negative one. Also, as in Ruby, JavaScript allows strings to be created with single or double quotes (as opposed to the strict double quote standard for strings in a language like Java).
+
+JavaScript is generally more liberal in its automatic type conversion than Ruby. However, while Ruby can use the multiplication operator on a String (if and only if the String comes before the operator), JavaScript will return NaN if you, for example, tried to run '"seven" * 3'. Additionally, JavaScript, compared to Ruby, has a couple extra values that are falsey. In Ruby only nil and false are falsey. In JavaScript, in addition to false and null being falsey 0, -0, "", '', undefined, and NaN are all falsely as well.
+
 Ch. 2: Program Structure
 What is an expression?
+A fragment of code that produces a value is an expression. All literal values (like 10 or "this") are expressions.
 
 What is the purpose of semicolons in JavaScript? Are they always required?
+Semicolons declare the end of a statement but they are not always required
 
 What causes a variable to return undefined?
+A variable returns undefined with it lacks a meaningful value like when you ask for the value of an empty variable.
 
 Write your own variable and do something to it in the eloquent.js file.
 
 What does console.log do and when would you use it? What Ruby method(s) is this similar to?
+console.log writes output to some output device. This is similar to puts in Ruby as it also prints output.
 
 Write a short program that asks for a user to input their favorite food. After they hit return, have the program respond with "Hey! That's my favorite too!" (You will probably need to run this in the Chrome console (Links to an external site.) rather than node since node does not support prompt or alert). Paste your program into the eloquent.js file.
 
 Describe while and for loops
+While loops run so long as a condition is true and check before the next iteration if the condition is now false. For example:
+
+var counter = 5;
+while (counter < 7) {
+	console.log(counter);
+	counter += 1;
+}
+
+This loop will run exactly twice as the condition "counter < 7" will only be true after two iterations of the loop. For loops, like while loops, run only so long as a certain condition is true and are a kind of condensed version of while loops. For example:
+
+for (var counter = 5; counter < 7; counter += 1)
+  console.log(counter)
+
+This is identical to the program I wrote above in functionality.
 
 What other similarities or differences between Ruby and JavaScript did you notice in this section?
+While and for loops run very similarly in both languages with the only differences being minor syntax changes. However, there is a bit more of a difference between switch statements in Ruby and JavaScript as JavaScript explictly must define breaks in addition to preceded the statement with the keyword "switch".
 
 Complete at least one of the exercises (Looping a Triangle, FizzBuzz, of Chess Board) in the eloquent.js file.
 
 Ch. 3: Functions
 
 What are the differences between local and global variables in JavaScript?
+Local variables are created inside a function and can not be accessed outside of that function. Global variables, by contrast are created outside of any function in a program and are visible by the entirity of the program.
 
 When should you use functions?
+You should use functions to define any new behavior that is not already defined.
 
 What is a function declaration?
+A function declaration is defining a function variable by pointing it at the given function. For example :
+
+function doThis(x) {
+	console.log("This is done.");
+}
+doThis()
 
 Complete the minimum exercise in the eloquent.js file.
 
 Ch. 4: Data Structures: Objects and Arrays
 
 What is the difference between using a dot and a bracket to look up a property? Ex. array.max vs array["max"]
+You can call values that are not valid variable names using bracket notation but can't with dot notation. For example, you could call "stringer.length" but not "stringer.'Face'". This is because with bracket notation the expression in the brackets is evaluated to apprehend the property before returning.
 
 Create an object called me that stores your name, age, three favorite foods, and a quirk in your eloquent.js file.
 
 What is a JavaScript object with a name and value property similar to in Ruby?
+
+Arrays are quite similar in JavaScript and Ruby as they are denoted with the same name and enclosing structure, []. They also have the push, pop, and join methods which use the same names.
+
+
+What are the biggest similarities and differences between JavaScript and Ruby?
+JavaScript and Ruby handle numbers, strings, operators, and array objects very similarly. The syntax for using them is almost identical and some basic methods on these simple objects share the same name.
+
+Perhaps the biggest difference is the way JavaScript handles input that is not what the program is expecting. Whereas Ruby will typically throw an error, JavaScript will quietly convert the object to a type of object that can be handled.
+
+Was some of your Ruby knowledge solidified by learning another language? If so, which concepts?
+
+
+How do you feel about diving into JavaScript after reading these chapters?
