@@ -1,0 +1,184 @@
+// Manipulating JavaScript Objects
+
+// I worked on this challenge: [by myself, with: ]
+
+// There is a section below where you will write your code.
+
+// DO NOT ALTER THIS OBJECT BY ADDING ANYTHING WITHIN THE CURLY BRACES!
+var terah = {
+  name: "Terah",
+  age: 32,
+  height: 66,
+  weight: 130,
+  hairColor: "brown",
+  eyeColor: "brown"
+}
+// __________________________________________
+// Write your code below.
+
+
+
+var adam = new Object();
+adam = {
+  name: "Adam"
+}
+
+terah = {
+  spouse: adam
+}
+
+terah.weight = 125
+
+// delete.terah.eyeColor
+
+terah.spouse.spouse = terah;
+terah.children = new Object();
+
+
+terah.children.carson = {
+  name: "Carson"
+}
+
+terah.children.carter = {
+  name: "Carter"
+}
+terah.children.colton = {
+  name: "Colton"
+}
+// var carter = "Carter";
+// var colton = "Colton";
+
+// terah.children = [carson, carter, colton]
+
+adam.children = terah.children
+
+// terah = {
+//   children: "Carson"
+// }
+// __________________________________________
+// Reflection: Use the reflection guidelines
+//
+
+/*
+What tests did you have trouble passing? What did you do to make it
+pass? Why did that work?
+I had trouble getting the terah.children to be populated with objects
+at all and then getting them to have names. Initially, through not
+understanding what was being asked I was attempting to assign
+terah.children to contain an array with the required names.
+
+I eventually realized that I could just chain an addtional ".property"
+to get it to register because that way you can directly assign the
+value of a property.
+
+
+How difficult was it to add and delete properties outside of the
+object itself?
+I feel like it was challenging to get it to work but largely due
+to my lack of familiarity with JavaScript. I don't think this is
+inherently challenging.
+
+What did you learn about manipulating objects in this challenge?
+I learned that, much like chaining methods in Ruby, you can
+manipulate properties of properties by using dot notation upon
+dot notation like "object.property1.propertyOfProperty1".
+
+*/
+
+// __________________________________________
+// Driver Code:  Do not alter code below this line.
+function assert(test, message, test_number) {
+  if (!test) {
+    console.log(test_number + "false");
+    throw "ERROR: " + message;
+  }
+  console.log(test_number + "true");
+  return true;
+}
+
+assert(
+  (adam instanceof Object),
+  "The value of adam should be an Object.",
+  "1. "
+)
+
+assert(
+  (adam.name === "Adam"),
+  "The value of the adam name property should be 'Adam'.",
+  "2. "
+)
+
+assert(
+  terah.spouse === adam,
+  "terah should have a spouse property with the value of the object adam.",
+  "3. "
+)
+
+assert(
+  terah.weight === 125,
+  "The terah weight property should be 125.",
+  "4. "
+)
+
+assert(
+  terah.eyeColor === undefined || null,
+  "The terah eyeColor property should be deleted.",
+  "5. "
+)
+
+assert(
+  terah.spouse.spouse === terah,
+  "Terah's spouse's spouse property should refer back to the terah object.",
+  "6. "
+)
+
+assert(
+  (terah.children instanceof Object),
+  "The value of the terah children property should be defined as an Object.",
+  "7. "
+)
+
+assert(
+  (terah.children.carson instanceof Object),
+  "carson should be defined as an object and assigned as a child of Terah",
+  "8. "
+  )
+
+assert(
+  terah.children.carson.name === "Carson",
+  "Terah's children should include an object called carson which has a name property equal to 'Carson'.",
+  "9. "
+)
+
+assert(
+  (terah.children.carter instanceof Object),
+  "carter should be defined as an object and assigned as a child of Terah",
+  "10. "
+  )
+
+assert(
+  terah.children.carter.name === "Carter",
+  "Terah's children should include an object called carter which has a name property equal to 'Carter'.",
+  "11. "
+)
+
+assert(
+  (terah.children.colton instanceof Object),
+  "colton should be defined as an object and assigned as a child of Terah",
+  "12. "
+  )
+
+assert(
+  terah.children.colton.name === "Colton",
+  "Terah's children should include an object called colton which has a name property equal to 'Colton'.",
+  "13. "
+)
+
+assert(
+  adam.children === terah.children,
+  "The value of the adam children property should be equal to the value of the terah children property",
+  "14. "
+)
+
+console.log("\nHere is your final terah object:")
+console.log(terah)
