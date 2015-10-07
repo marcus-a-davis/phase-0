@@ -1,4 +1,4 @@
-_Release 5_
+**Release 5**
 
 1.  SELECT * FROM states;
 2.  SELECT * FROM regions;
@@ -24,19 +24,19 @@ _Release 5_
     JOIN states on regions.id=states.region_id 
     ORDER BY region_id ASC;
 
-_Release 6: Schema_
+**Release 6: Schema**
 
 ![my_schema](imgs/schema_8-4.png "My schema")
 
-_Reflect_
+**Reflect**
 
-What are databases for?
+*What are databases for?*
 Storing data that cab be easily searched and queried. Because the amount
 of data you can need to store can be quite large, it very often would be
 unsuitable to store data directly in your program as, if this program is
 running on a website, make the page slow to load.
 
-What is a one-to-many relationship?
+**What is a one-to-many relationship?**
 One-to-many describes the relationship between two objects. With
 relational databases, this describes the relationship between two tables.
 For example, suppose you have two tables, person and cars. Each person
@@ -45,7 +45,7 @@ you can model this relationship by creating the cars table such that each
 person is uniquely identified in the cars table but each person can own
 more than one car.
 
-What is a primary key? What is a foreign key? How can you determine which is which?
+**What is a primary key? What is a foreign key? How can you determine which is which?**
 Primary keys are a way to identify each entry in the table and make sure
 there are no duplicates entries. They are unique to each instance of a
 table and every instance must have one.
@@ -55,7 +55,7 @@ another table. Foreign keys are not unique and this is one way you
 can tell them apart from primary keys.
 
 
-How can you select information out of a SQL database? What are some general guidelines for that?
+**How can you select information out of a SQL database? What are some general guidelines for that?**
 
 When selecting records from a table, all statements must end with a
 semi-colon and, by conventions, the keywords "SELECT" and "FROM" are
