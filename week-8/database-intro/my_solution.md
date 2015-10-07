@@ -30,7 +30,7 @@
 
 **Reflect**
 
-*What are databases for?*
+**What are databases for?**
 Storing data that cab be easily searched and queried. Because the amount
 of data you can need to store can be quite large, it very often would be
 unsuitable to store data directly in your program as, if this program is
