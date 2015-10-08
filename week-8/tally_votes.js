@@ -63,31 +63,14 @@ var officers = {
 }
 
 // Pseudocode
-//Create a function that iterates over votes and nested objects which are students
-//In the inner loop, add their vote to the correct property in vote count 
-//Create a function that checks voteCount and assigns the highest number of votes for each office
+
 
 // __________________________________________
 // Initial Solution
-var offices = ["president", "vicePresident", "secretary", "treasurer"];
-var tallyVotes = function() {
-  for(var key in votes){
-    for (var i = 0; i < offices.length; i++) {
-      var position = offices[i];
-      if (voteCount[position].hasOwnProperty([votes[key][position]]) {
-              console.log("This is working");
-          } else {
-            console.log("The else statement");
-//          voteCount[position] = "Bob": count++
-          }
-  }
-  
-    
-  }
-}
-};
 
-tallyVotes();
+
+
+
 
 
 
