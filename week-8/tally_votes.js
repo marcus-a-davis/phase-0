@@ -1,7 +1,12 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
+<<<<<<< HEAD
+// I worked on this challenge with Chris Mark:
+// This challenge took me 3 hours.
+=======
 // I worked on this challenge with:
 // This challenge took me [#] hours.
+>>>>>>> master
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -40,7 +45,11 @@ var voteCount = {
   secretary: {},
   treasurer: {}
 }
+<<<<<<< HEAD
+// console.log("This is working");
+=======
 
+>>>>>>> master
 /* The name of each student receiving a vote for an office should become a property
 of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
@@ -63,11 +72,56 @@ var officers = {
 }
 
 // Pseudocode
+<<<<<<< HEAD
+//Create a function that iterates over votes and nested objects which are students
+//In the inner loop, add their vote to the correct property in vote count 
+//Create a function that checks voteCount and assigns the highest number of votes for each office
+=======
 
+>>>>>>> master
 
 // __________________________________________
 // Initial Solution
 
+<<<<<<< HEAD
+// __________________________________________
+// Refactored Solution
+var tallyVotes = function(){
+    for (var office in officers) {
+      for (var name in votes) {
+        if(voteCount[office][votes[name][office]]) {
+          (voteCount[office][votes[name][office]]) +=1;
+        }
+        else {
+        (voteCount[office][votes[name][office]]) = 1;
+        }
+      }
+    }
+}
+tallyVotes();
+
+
+
+function winner() {
+    for (var key in voteCount) {
+      var max = 0;
+      for(var person in voteCount[key]) {
+        if (voteCount[key][person] > max) {
+          max = voteCount[key][person];
+         var champion = person;
+          // console.log(max);
+          // console.log(champion);
+        }
+        
+        
+      }
+      officers[key] = champion;
+      
+    }
+}
+
+winner()
+=======
 
 
 
@@ -81,14 +135,40 @@ var officers = {
 
 
 
+>>>>>>> master
 
 // __________________________________________
 // Reflection
 
 
+<<<<<<< HEAD
+/*
+What did you learn about iterating over nested objects in JavaScript?
+Accessing the particular value in a nested array is straightforward
+and similar to how such values would be accessed in Ruby. Iterating,
+by contrast, was much different as the for...in syntax used was
+unfamiliar. It was good to get some practice using it to 
+manipulate values in different objects.
+
+Were you able to find useful methods to help you with this?
+We didn't use any methods to do this. We stuck with calling properties
+by direct reference. We did, however, explore using some alternative
+code to find the maximum value of a set of properties but decided
+against it because it was less clear than what we had already written.
+
+What concepts were solidified in the process of working through this
+challenge?
+Iterating over nested objects and manipulating the properties of
+objects by reference to other objects. While I feel like we
+accomplished the goal, I can definitely use much more practice with
+this in JavaScript.
+
+*/
+=======
 
 
 
+>>>>>>> master
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
