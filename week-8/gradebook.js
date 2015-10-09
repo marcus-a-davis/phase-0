@@ -1,109 +1,106 @@
-/*
-Gradebook from Names and Scores
-I worked on this challenge with: Rosslyn Sinclair-Chin
-This challenge took me 1 hours.
-You will work with the following two variables.  The first, students, holds the names of four students.
-The second, scores, holds groups of test scores.  The relative positions of elements within the two
-variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
-Do not alter the students and scores code.
+// Tally Votes in JavaScript Pairing Challenge.
+
+// I worked on this challenge with:
+// This challenge took me [#] hours.
+
+// These are the votes cast by each student. Do not alter these objects here.
+var votes = {
+  "Alex": { president: "Bob", vicePresident: "Devin", secretary: "Gail", treasurer: "Kerry" },
+  "Bob": { president: "Mary", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
+  "Cindy": { president: "Cindy", vicePresident: "Hermann", secretary: "Bob", treasurer: "Bob" },
+  "Devin": { president: "Louise", vicePresident: "John", secretary: "Bob", treasurer: "Fred" },
+  "Ernest": { president: "Fred", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
+  "Fred": { president: "Louise", vicePresident: "Alex", secretary: "Ivy", treasurer: "Ivy" },
+  "Gail": { president: "Fred", vicePresident: "Alex", secretary: "Ivy", treasurer: "Bob" },
+  "Hermann": { president: "Ivy", vicePresident: "Kerry", secretary: "Fred", treasurer: "Ivy" },
+  "Ivy": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Gail" },
+  "John": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Kerry" },
+  "Kerry": { president: "Fred", vicePresident: "Mary", secretary: "Fred", treasurer: "Ivy" },
+  "Louise": { president: "Nate", vicePresident: "Alex", secretary: "Mary", treasurer: "Ivy" },
+  "Mary": { president: "Louise", vicePresident: "Oscar", secretary: "Nate", treasurer: "Ivy" },
+  "Nate": { president: "Oscar", vicePresident: "Hermann", secretary: "Fred", treasurer: "Tracy" },
+  "Oscar": { president: "Paulina", vicePresident: "Nate", secretary: "Fred", treasurer: "Ivy" },
+  "Paulina": { president: "Louise", vicePresident: "Bob", secretary: "Devin", treasurer: "Ivy" },
+  "Quintin": { president: "Fred", vicePresident: "Hermann", secretary: "Fred", treasurer: "Bob" },
+  "Romanda": { president: "Louise", vicePresident: "Steve", secretary: "Fred", treasurer: "Ivy" },
+  "Steve": { president: "Tracy", vicePresident: "Kerry", secretary: "Oscar", treasurer: "Xavier" },
+  "Tracy": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
+  "Ullyses": { president: "Louise", vicePresident: "Hermann", secretary: "Ivy", treasurer: "Bob" },
+  "Valorie": { president: "Wesley", vicePresident: "Bob", secretary: "Alex", treasurer: "Ivy" },
+  "Wesley": { president: "Bob", vicePresident: "Yvonne", secretary: "Valorie", treasurer: "Ivy" },
+  "Xavier": { president: "Steve", vicePresident: "Hermann", secretary: "Fred", treasurer: "Ivy" },
+  "Yvonne": { president: "Bob", vicePresident: "Zane", secretary: "Fred", treasurer: "Hermann" },
+  "Zane": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Mary" }
+}
+
+// Tally the votes in voteCount.
+var voteCount = {
+  president: {},
+  vicePresident: {},
+  secretary: {},
+  treasurer: {}
+}
+
+/* The name of each student receiving a vote for an office should become a property
+of the respective office in voteCount.  After Alex's votes have been tallied,
+voteCount would be ...
+  var voteCount = {
+    president: { Bob: 1 },
+    vicePresident: { Devin: 1 },
+    secretary: { Gail: 1 },
+    treasurer: { Kerry: 1 }
+  }
 */
 
 
+/* Once the votes have been tallied, assign each officer position the name of the
+student who received the most votes. */
+var officers = {
+  president: undefined,
+  vicePresident: undefined,
+  secretary: undefined,
+  treasurer: undefined
+}
+
+// Pseudocode
+//Create a function that iterates over votes and nested objects which are students
+//In the inner loop, add their vote to the correct property in vote count 
+//Create a function that checks voteCount and assigns the highest number of votes for each office
+
 // __________________________________________
-// Write your code below.
+// Initial Solution
+var offices = ["president", "vicePresident", "secretary", "treasurer"];
+var tallyVotes = function() {
+  for(var key in votes){
+    for (var i = 0; i < offices.length; i++) {
+      var position = offices[i];
+      if (voteCount[position].hasOwnProperty([votes[key][position]]) {
+              console.log("This is working");
+          } else {
+            console.log("The else statement");
+//          voteCount[position] = "Bob": count++
+          }
+  }
+  
+    
+  }
+}
+};
 
-// var students = ["Joseph", "Susan", "William", "Elizabeth"]
-
-// var scores = [ [80, 70, 70, 100],
-//                [85, 80, 90, 90],
-//                [75, 70, 80, 75],
-//                [100, 90, 95, 85] ]
-
-// var gradebook = {
-//   Joseph: {testScores: scores[0]},
-//   Susan: {testScores: scores[1]},
-//   William: {testScores: scores[2]},
-//   Elizabeth: {testScores: scores[3]},
-//   addScore: function (name, score) {
-//               gradebook[name].testScores.push(score)
-//             },
-//   getAverage: function(name) {
-//                return average(gradebook[name].testScores);
-//             },
-// };
-
-// function average(array) {
-//   var total = 0;
-//   for(var count = 0; count < array.length; count++) {
-//     total += array[count];
-//   }
-//   var mean = total/array.length;
-//   return mean
-// }
-
-
+tallyVotes();
 
 
 
 // __________________________________________
 // Refactored Solution
 
-var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
-var scores = [ [80, 70, 70, 100],
-               [85, 80, 90, 90],
-               [75, 70, 80, 75],
-               [100, 90, 95, 85] ]
 
-var gradebook = {
-  Joseph: {testScores: scores[0]},
-  Susan: {testScores: scores[1]},
-  William: {testScores: scores[2]},
-  Elizabeth: {testScores: scores[3]},
-  addScore: function (name, score) {
-              gradebook[name].testScores.push(score)
-            },
-  getAverage: function(name) {
-               return average(gradebook[name].testScores);
-            },
-};
 
-function average(array) {
-  var total = 0;
-  total = array.reduce(function(a, b){return a+b})
-
-  var mean = total/array.length;
-  return mean
-}
 
 
 // __________________________________________
-// Reflect
-
-/*
-What did you learn about adding functions to objects?
-Adding functions to objects works the same way you create functions
-outside of them. You use the same syntax after the defintion of the
-property where you placed it.
-
-How did you iterate over nested arrays in JavaScript?
-We didn't have to iterate over any nested arrays but we did add to one.
-To iterate over a nested array, though, you would use this syntax:
-
-for(var outerCount = 0; outerCount < array.length; outerCount++) {
-  var innerloop = array[count];
-  for (var innerCount = 0; innerCount < innerloop.length; innerCount++){
-    -----code you want to run here----
-  }
-}
-
-Were there any new methods you were able to incorporate?
-If so, what were they and how did they work?
-We used reduce() to sum an array. reduce() takes a fucntion that allows
-you to perform whatever operation you like on the elements of the
-array. We input two parameters, a and b, into that function and simply
-added them like so: "a + b". 
-*/
+// Reflection
 
 
 
@@ -123,60 +120,50 @@ function assert(test, message, test_number) {
   return true;
 }
 
-
-
 assert(
-  (gradebook instanceof Object),
-  "The value of gradebook should be an Object.\n",
+  (voteCount.president["Bob"] === 3),
+  "Bob should receive three votes for President.",
   "1. "
 )
 
 assert(
-  (gradebook["Elizabeth"] instanceof Object),
-  "gradebook's Elizabeth property should be an object.",
+  (voteCount.vicePresident["Bob"] === 2),
+  "Bob should receive two votes for Vice President.",
   "2. "
 )
 
 assert(
-  (gradebook.William.testScores === scores[2]),
-  "William's testScores should equal the third element in scores.",
+  (voteCount.secretary["Bob"] === 2),
+  "Bob should receive two votes for Secretary.",
   "3. "
 )
 
 assert(
-  (gradebook.addScore instanceof Function),
-  "The value of gradebook's addScore property should be a Function.",
+  (voteCount.treasurer["Bob"] === 4),
+  "Bob should receive four votes for Treasurer.",
   "4. "
 )
 
-gradebook.addScore("Susan", 80)
-
 assert(
-  (gradebook.Susan.testScores.length === 5
-   && gradebook.Susan.testScores[4] === 80),
-  "Susan's testScores should have a new score of 80 added to the end.",
+  (officers.president === "Louise"),
+  "Louise should be elected President.",
   "5. "
 )
 
 assert(
-  (gradebook.getAverage instanceof Function),
-  "The value of gradebook's getAverage property should be a Function.",
+  (officers.vicePresident === "Hermann"),
+  "Hermann should be elected Vice President.",
   "6. "
 )
 
 assert(
-  (average instanceof Function),
-  "The value of average should be a Function.\n",
+  (officers.secretary === "Fred"),
+  "Fred should be elected Secretary.",
   "7. "
-)
-assert(
-  average([1, 2, 3]) === 2,
-  "average should return the average of the elements in the array argument.\n",
-  "8. "
 )
 
 assert(
-  (gradebook.getAverage("Joseph") === 80),
-  "gradebook's getAverage should return 80 if passed 'Joseph'.",
-  "9. "
+  (officers.treasurer === "Ivy"),
+  "Ivy should be elected Treasurer.",
+  "8. "
 )

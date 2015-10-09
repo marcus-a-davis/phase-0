@@ -1,7 +1,12 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
+<<<<<<< HEAD
 // I worked on this challenge with Chris Mark:
 // This challenge took me 3 hours.
+=======
+// I worked on this challenge with:
+// This challenge took me [#] hours.
+>>>>>>> master
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -40,7 +45,11 @@ var voteCount = {
   secretary: {},
   treasurer: {}
 }
+<<<<<<< HEAD
 // console.log("This is working");
+=======
+
+>>>>>>> master
 /* The name of each student receiving a vote for an office should become a property
 of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
@@ -63,13 +72,18 @@ var officers = {
 }
 
 // Pseudocode
+<<<<<<< HEAD
 //Create a function that iterates over votes and nested objects which are students
 //In the inner loop, add their vote to the correct property in vote count 
 //Create a function that checks voteCount and assigns the highest number of votes for each office
+=======
+
+>>>>>>> master
 
 // __________________________________________
 // Initial Solution
 
+<<<<<<< HEAD
 // __________________________________________
 // Refactored Solution
 var tallyVotes = function(){
@@ -107,11 +121,27 @@ function winner() {
 }
 
 winner()
+=======
+
+
+
+
+
+
+// __________________________________________
+// Refactored Solution
+
+
+
+
+
+>>>>>>> master
 
 // __________________________________________
 // Reflection
 
 
+<<<<<<< HEAD
 /*
 What did you learn about iterating over nested objects in JavaScript?
 Accessing the particular value in a nested array is straightforward
@@ -134,6 +164,11 @@ accomplished the goal, I can definitely use much more practice with
 this in JavaScript.
 
 */
+=======
+
+
+
+>>>>>>> master
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
