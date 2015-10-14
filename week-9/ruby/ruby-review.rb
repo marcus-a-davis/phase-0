@@ -72,8 +72,3 @@ def super_fizzbuzz(array)
 	end
 	array
 end
-
-
-
-
-# Reflection

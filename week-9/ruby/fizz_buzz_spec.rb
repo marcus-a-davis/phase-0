@@ -1,4 +1,4 @@
-require_relative "ruby-review"
+require_relative "ruby-review.rb"
 
 # This returns an array of the given `size` containing random powers of `base`
 # Since no power of 3 is ever a multiple of 5, this lets us create random arrays
